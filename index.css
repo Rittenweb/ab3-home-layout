@@ -6,6 +6,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  text-align: left;
 }
 
 header {
@@ -37,12 +38,13 @@ main {
 
 .service {
   background-color: whitesmoke;
-  max-width: 40vw;
+  width: 40vw;
+  min-width: 340px;
   border-left: 6px solid #8f621a;
   border-radius: 3px;
-  padding: 5px;
+  padding: 10px;
   margin: 30px 5px 0px 5px;
-  box-shadow: 2px 2px 4px;
+  box-shadow: 2px 2px 8px;
 }
 
 .service-header {
@@ -50,19 +52,99 @@ main {
   align-items: center;
 }
 
+.service-header :nth-child(2) {
+  border-bottom: 2px solid #8f621a;
+}
+
+.tags {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.tag {
+  padding: 5px 15px 5px 15px;
+  border-radius: 3px;
+  color: white;
+}
+
+.tag:hover {
+  color: #3a4856;
+}
+
+.tag:nth-child(odd) {
+  background: linear-gradient(90deg, #c9954c 0%, #8f621a 100%);
+}
+
+.tag:nth-child(even) {
+  background: linear-gradient(270deg, #22a7f0 0%, #6995bb 100%);
+}
+
+table {
+  margin: 20px auto 20px auto;
+  border-collapse: separate;
+}
+
+th {
+  padding: 1vw 2vw 1vw 2vw;
+  background-color: #3a4856;
+  color: whitesmoke;
+}
+
+th:first-child {
+  border-top-left-radius: 4px;
+}
+
+th:last-child {
+  border-top-right-radius: 4px;
+}
+
+td:first-child {
+  border-left: 3px solid #22a7f0;
+}
+
+tr:hover {
+  background-color: #9eadbd;
+}
+
+td {
+  padding: 1vw;
+  border-bottom: 1px solid #9eadbd;
+}
+
+.price-by-sqft {
+  margin-left: 20px;
+  padding: 5px 15px 5px 15px;
+  border-radius: 3px;
+  border-left: 3px solid #22a7f0;
+  box-shadow: 2px 2px 2px;
+}
+
+.price-by-sqft:hover {
+  background-color: #9eadbd;
+}
+
 .other-service {
   background-color: whitesmoke;
-  max-width: 80vw;
+  width: 80vw;
   border-left: 6px solid #8f621a;
   border-radius: 3px;
-  padding: 5px;
+  padding: 20px;
   margin: 30px auto 20px auto;
   box-shadow: 2px 2px 4px;
 }
 
 .other-service :nth-child(2) {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .ball {
@@ -72,6 +154,3 @@ main {
   width: 25px;
   border-radius: 50%;
 }
-
-/* background-color: #3a4856; */
-/* background-color: #22A7F0; */
