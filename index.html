@@ -3,6 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("user_1vi9BKzfK5V7LyFshPht4");
+      })();
+    </script>
+        <script type="text/javascript">
+          window.onload = function() {
+
+              document.querySelector('.contact-form').addEventListener('submit', function(event) {
+                  event.preventDefault();
+
+                  var template_params = {
+                    "from_name": this.user_name.value,
+                    "from_email": this.user_email.value,
+                    "from_number": this.user_number.value,
+                    "message": this.message.value
+                  }
+                  emailjs.send('default_service', 'ab3', template_params)
+                  .then(function(response) {
+                    console.log('Sent! We will get back to you ASAP', response.status, response.text);
+                  }, function(error) {
+                    console.log('Send failed... Please call or email us directly at ab3usa@gmail.com', error);
+                  });
+              });
+          }
+      </script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="./index.css" rel="stylesheet">
     <title>AB3 CONSTRUCTION</title>
@@ -201,8 +228,19 @@
         </section>
       </main>
       <footer>
-      <h2>To schedule your Free Estimate and/or to schedule work for the Competitive Pricing listed above, call us at (877) 778-6376, or email us below</h2>
-        <!-- ab3usa@gmail.com -->
+      <h2>To schedule your Free Estimate and/or to schedule work for the Competitive Pricing listed above, call us at <span class="number"><span class="bracket">(</span>877<span class="bracket">)</span> 778-6376</span>,<br> 
+        OR email us below, leaving your email or phone number:</h2>
+        <form class="contact-form">
+          <label>Name</label>
+          <input type="text" name="user_name">
+          <label>Email</label>
+          <input type="email" name="user_email">
+          <label>Phone Number</label>
+          <input type="tel" name="user_number">
+          <label>Message</label>
+          <textarea name="message"></textarea>
+          <input type="submit" value="Send">
+        </form>
       </footer>
   </body>
 </html>

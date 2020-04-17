@@ -69,10 +69,6 @@ main {
   color: white;
 }
 
-.tag:hover {
-  color: #3a4856;
-}
-
 .tag:nth-child(odd) {
   background: linear-gradient(90deg, #c9954c 0%, #8f621a 100%);
 }
@@ -153,4 +149,12 @@ td {
   height: 25px;
   width: 25px;
   border-radius: 50%;
+}
+
+.number {
+  border-bottom: 2px solid #8f621a;
+}
+
+.bracket {
+  color: #22a7f0;
 }
