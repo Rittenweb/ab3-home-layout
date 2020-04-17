@@ -65,6 +65,7 @@ main {
 
 .tag {
   padding: 5px 15px 5px 15px;
+  margin: 0px 2px 0px 2px;
   border-radius: 3px;
   color: white;
 }
@@ -151,10 +152,113 @@ td {
   border-radius: 50%;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85vw;
+  margin: auto;
+}
+
 .number {
   border-bottom: 2px solid #8f621a;
 }
 
 .bracket {
   color: #22a7f0;
+}
+
+.contact-form {
+  width: 50vw;
+  min-width: 340px;
+  border-left: 6px solid #8f621a;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 30px 5px 30px 5px;
+  box-shadow: 2px 2px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.inputs-and-logo {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-small {
+  width: 20vw;
+  height: 10vw;
+  margin: 2vw 2vw 0 0;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  max-width: 20vw;
+}
+
+.email-us {
+  border-bottom: 2px solid #8f621a;
+}
+
+.message {
+  margin: 20px 0px 20px 0px;
+}
+
+textarea {
+  border-left: 3px solid #22a7f0;
+  border-radius: 4px;
+  height: 160px;
+  width: 100%;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+input {
+  border-radius: 3px;
+  margin: 10px 0 10px 0;
+  padding: 4px;
+  width: 20vw;
+}
+
+.send {
+  align-self: flex-end;
+  width: 10%;
+  padding: 4px;
+  border-radius: 10px;
+  border: none;
+  background-color: #22a7f0;
+  margin: 0 3vw 10px 0;
+  color: white;
+}
+
+.response {
+  margin: 20vw auto 20vw auto;
+  min-width: 300px;
+  width: 50vw;
+  height: 5vw;
+  border-radius: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2vw;
+}
+
+.success {
+  background-color: #22a7f0;
+}
+
+.failure {
+  background-color: rgb(177, 42, 42);
 }
